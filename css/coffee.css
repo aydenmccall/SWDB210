@@ -1,0 +1,294 @@
+/*
+    Original Author: Ayden McCall
+    Change Log
+    8/26: File Creation and initialization
+    8/27: Added media queries, header and main content
+    8/29: Reworked media queries; added animation to navlinks
+    8/31: added color transitions and minor heading adjustments
+    9/2: added failed and successful classes for newsletter
+    9/21: store support added
+*/
+
+/* BODY */
+.bg-darkblue {
+    background-color: #25274D;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-navy {
+    background-color: #3e4188;
+}
+
+
+/* NAVBAR */
+nav {
+    /*background-color: #5f2f0d;*/
+    font-size: 1.3em;
+}
+
+#topnav .active {
+    color: rgb(8, 135, 173)
+}
+
+nav a {
+    color: snow; 
+}
+
+.nav-color {
+    color: snow; 
+    transition: 1s;
+}
+
+.nav-color:hover {
+    color: #2E9CCA;
+    text-decoration: none;
+    transition: 1s;
+}
+
+#shopCounter {
+    border-radius: 50%;
+    font-size: 65%;
+    width: fit-content;
+}
+
+#logo {
+    font-size: 1.5em;
+    text-decoration: none;
+    margin: 0;
+    padding-right: 10px;
+    padding-top: 0px;
+    transition: 1s;
+}
+
+#logo.hoverEffect:hover {
+    transition: 1.5s;
+    margin-right: +10px;
+    margin-left: +10px;
+}
+
+#hamburgerButton {
+    float: right;
+    background-color: #2E9CCA;
+    display: none;
+    margin-top: 1.5%;
+}
+
+#shopIcon {
+    font-size: 1.8em;
+}
+
+
+.hoverEffect {
+    transition: 1s;
+}
+
+.hoverEffect:hover {
+    transition: 1.5s;
+    margin-right: +10px;
+    margin-left: +10px;
+}
+
+/*HEADER IMAGE*/
+header {
+    color: snow;
+    padding-bottom: 10px;
+}
+
+header.modalHeader {
+    width: 60%;
+}
+
+header .coffee-bg {
+    margin:auto;
+    width: 80%;
+    height: 800px;
+    background-image: url(../img/coffee-1280.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    text-align: center;
+    border-radius: 25px;
+}
+
+header .coffee-bg div.welcome {
+    width: 30%;
+    flex-wrap: wrap;
+    height: fit-content;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    background-color: #572a09;
+}
+
+/* MAIN */
+main {
+    padding: 10px;
+    font-size: 1.25em;
+    color: snow;
+    text-align: center;
+}
+
+.flexBox {
+    display: flex;
+}
+
+.flexChild {
+    flex: 1;
+}
+
+.flexChild2 {
+    flex: 4;
+}
+
+div.flexChild h4 {
+    margin-bottom: 20px;
+}
+
+p.minus {
+    display: none;
+}
+
+div.open {
+    display: block;
+}
+
+.noDisplay {
+    display: none;
+}
+
+.carouselImage {
+    padding-inline-start: 0px;
+}
+
+.carouselImage img {
+    max-width: 640px;
+    margin: auto;
+}
+
+#accordion {
+    width: 50%;
+}
+
+#accordion div {
+    padding: 15px;
+    background-color: #25274D;
+    color: white;
+}
+
+#newsletterError {
+    margin-top: 4px;
+}
+
+/* STORE */
+
+
+#storeModal {
+    height:fit-content;
+    width: max-content;
+    padding: 40px;
+    font-size: large;
+}
+
+.remove {
+    color:rgb(160, 23, 23);
+}
+
+.remove:hover {
+    text-decoration: none;
+}
+
+.failed {
+    color: rgb(250, 87, 87);
+}
+
+.successful {
+    color: cyan;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 10px;
+}
+
+/* MEDIA QUERY */
+
+.desktop-only {
+    display: block;
+}
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 600px) { 
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: block;
+    }
+
+    #div1 {
+        width: 100%;
+    }
+
+    #topnav {
+        display: none;
+    }
+
+    #topnav.active {
+        display: block;
+    }
+
+    #hamburgerButton {
+        display: block;
+    }
+
+    header .coffee-bg {
+        background-image: url(../img/coffee-640.jpg);
+        height:auto;
+    }
+    header .coffee-bg div.welcome {
+        width: 50%;
+    }
+
+    .remove {
+        color:rgb(160, 23, 23) !important;
+    }
+
+    .carousel div{
+        white-space: nowrap;
+        display: inline-block !important;
+    }
+
+    .carouselImage img {
+        width: 225px;
+    }
+
+    #accordion {
+        width: 70%
+    }
+
+    footer p {
+        font-size: 1.25em;
+    }
+
+    /* FAQ MAIN */
+
+    div.flexBox {
+        display: block;
+    }
+    div.flexChild {
+        margin-bottom: 100px;
+    }
+
+    /* STORE MAIN */
+    div.flexBox img {
+        max-width: 320px;
+    }  
+}

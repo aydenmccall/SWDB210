@@ -1,0 +1,32 @@
+
+/*
+Original Author: Ayden McCall
+Change Log
+9/2: Instantiation
+*/
+
+#errorList {
+    display: none;
+    list-style-type: none;
+    color:orangered;
+}
+
+#errorList.display {
+    display: block;
+}
+
+form > label {
+    margin-bottom: 20px;
+}
+
+input[type=radio] {
+    margin-right: 20px;
+}
+
+textarea {
+    width: 200px;
+    max-width: 240px;
+    height: 100px;
+    transition: 1s;
+}
+
