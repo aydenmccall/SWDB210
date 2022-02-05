@@ -1,16 +1,20 @@
 <?php
 /*
  * Original Author: Ayden McCall
- * 
+ * Last edited by: Ayden McCall
  * Change Log:
  * 1/28/22: Instantiation
  */
 require_once('database.php');
+require('employee_db.php');
 
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 $category_id = filter_input(INPUT_POST, 'subject', FILTER_VALIDATE_INT);
 $message = filter_input(INPUT_POST, 'message');
 $employee_id = rand(1, 20);
+
+$employee = select_employee($employee_id);
+$full_name = "{$employee['first_name']} {$employee['last_name']}";
 
 
     $query = "INSERT INTO contact(email_address, category_id, visit_msg, visit_date, employee_id) "

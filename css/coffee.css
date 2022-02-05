@@ -22,6 +22,10 @@
     background-color: #3e4188;
 }
 
+.bg-grey {
+    background-color: grey !important;
+}
+
 
 /* NAVBAR */
 nav {
@@ -130,6 +134,11 @@ main {
     font-size: 1.25em;
     color: snow;
     text-align: center;
+}
+
+#admin-table {
+    background-color: white !important;
+    border: 2px black solid;
 }
 
 .flexBox {
