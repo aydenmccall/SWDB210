@@ -3,11 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/opt/lampp/htdocs/TheJavaHouse/model/employee_db.php</file>
             <file>file:/opt/lampp/htdocs/TheJavaHouse/thankyou.php</file>
-            <file>file:/opt/lampp/htdocs/TheJavaHouse/error.php</file>
-            <file>file:/opt/lampp/htdocs/TheJavaHouse/contact.html</file>
+            <file>file:/opt/lampp/htdocs/TheJavaHouse/css/coffee.css</file>
             <file>file:/opt/lampp/htdocs/TheJavaHouse/model/database.php</file>
+            <file>file:/opt/lampp/htdocs/TheJavaHouse/admin/index.php</file>
+            <file>file:/opt/lampp/htdocs/TheJavaHouse/admin/select_employee.php</file>
+            <file>file:/opt/lampp/htdocs/TheJavaHouse/admin/employee_view.php</file>
+            <file>file:/opt/lampp/htdocs/TheJavaHouse/contact.html</file>
+            <file>file:/opt/lampp/htdocs/TheJavaHouse/admin/form_view.php</file>
             <file>file:/opt/lampp/htdocs/TheJavaHouse/model/add_form_entry.php</file>
+            <file>file:/opt/lampp/htdocs/TheJavaHouse/view/footer.php</file>
+            <file>file:/opt/lampp/htdocs/TheJavaHouse/css/contact.css</file>
+            <file>file:/opt/lampp/htdocs/TheJavaHouse/model/form_db.php</file>
         </group>
     </open-files>
 </project-private>

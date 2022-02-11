@@ -1,7 +1,7 @@
 <?php
 //$full_name = filter_input(INPUT_GET, 'full_name');
 //require('./employee_db.php')
-$employee = select_employee($employee_id);
+$employee = EmployeeDB::select_employee($employee_id); //Get the specified Employee
 $full_name = "{$employee['first_name']} {$employee['last_name']}";
 ?>
 <link rel="stylesheet" href="../css/coffee.css">

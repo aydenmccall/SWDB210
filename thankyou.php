@@ -29,28 +29,8 @@ require_once('model/add_form_entry.php');
     </head>
 
     <body class="bg-darkblue">
-        <nav class="navbar navbar-expand-lg p-3">
-            <!--Div 1 is to force div 2 below when neccessary, it is expanded to 100 width when hamburger is clicked-->
-            <div id="div1">
-                <a class="navbar-brand nav-color hoverEffect" id="logo" href="index.html">The Java House</a>
-                <button id="hamburgerButton" class="float-end"><i class="fa fa-bars"></i></button>
-            </div>
-
-            <div id="topnav">
-                <ul class="navbar-nav nav-responsive">
-                    <a class="nav-link hoverEffect nav-color" href="index.html"><li class="nav-item">Home</li></a>
-                    <a class="nav-link hoverEffect nav-color" href="store.html"><li class="nav-item ">Store</li></a>
-                    <a class="nav-link hoverEffect nav-color" href="contact.html"><li class="nav-item active">Contact</li></a>
-                    <a class="nav-link hoverEffect nav-color" href="faq.html"><li class="nav-item">FAQ</li></a>
-                    <!--<a class="nav-link hoverEffect nav-color" href="#"><li class="nav-item  mobile-only">Cart</li></a>-->
-                </ul>
-                
-            </div>
-            
-            <!--<a href="#" class="ml-auto p-1 hoverEffect desktop-only nav-color" id="shopIcon"><i class="fa fa-shopping-cart"> Cart</i></a>-->
-            
-        </nav>
-
+       
+        <?php include 'view/nav.php'; ?>
 
 
         <header class="text-center">
@@ -59,6 +39,7 @@ require_once('model/add_form_entry.php');
 
         <main>
             <h2>Thank you for your message! We'll get back to you as soon as possible!</h2>
+            <p>Your assigned employee is <?=$full_name?></p>
         </main>
 
         <footer class="text-white text-center mt-3">

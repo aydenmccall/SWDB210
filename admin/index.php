@@ -9,6 +9,8 @@
 require('../model/form_db.php');
 require('../model/employee_db.php');
 
+//$database = new DB();
+
 $action = filter_input(INPUT_POST, 'action');
 if (empty($action)) {
     $action = filter_input(INPUT_GET, 'action');
@@ -27,18 +29,18 @@ switch ($action) {
             $error = 'Invalid delete id, please try again.';
             break;
         }
-        delete_form_entry($delete_id);
-        $entries = get_employee_forms($employee_id);
+        FormDB::delete_form_entry($delete_id);
+        $entries = FormDB::get_employee_forms($employee_id);
         $delete_id = null;
         
         break;
     case 'edit_form_entry':
         $entry_id = filter_input(INPUT_POST, 'entry_id');
         $message = filter_input(INPUT_POST, 'message');
-        edit_form_entry($entry_id, $message);
+        FormDB::edit_form_entry($entry_id, $message);
         
         $employee_id = filter_input(INPUT_POST, 'employee_id');
-        $entries = get_employee_forms($employee_id);
+        $entries = FormDB::get_employee_forms($employee_id);
         $selected_page = 'form_view.php';
         
         break;
@@ -46,14 +48,14 @@ switch ($action) {
     case 'select_employee':
         $employee_id = filter_input(INPUT_GET, 'employee_id');
         //$employee = select_employee($employee_id);
-        $entries = get_employee_forms($employee_id);
+        $entries = FormDB::get_employee_forms($employee_id);
         $selected_page = 'form_view.php';
                 
         break;
     
     default:
         $selected_page = 'employee_view.php';
-        $employees = get_employees();
+        $employees = EmployeeDB::get_employees();
         break;
 }
 
@@ -82,16 +84,16 @@ switch ($action) {
         <nav class="navbar navbar-expand-lg p-3">
             <!--Div 1 is to force div 2 below when neccessary, it is expanded to 100 width when hamburger is clicked-->
             <div id="div1">
-                <a class="navbar-brand nav-color hoverEffect" id="logo" href="../index.html">The Java House</a>
+                <a class="navbar-brand nav-color hoverEffect" id="logo" href="../index.php">The Java House</a>
                 <button id="hamburgerButton" class="float-end"><i class="fa fa-bars"></i></button>
             </div>
 
             <div id="topnav">
                 <ul class="navbar-nav nav-responsive">
-                    <a class="nav-link hoverEffect nav-color" href="../index.html"><li class="nav-item active">Home</li></a>
-                    <a class="nav-link hoverEffect nav-color" href="../store.html"><li class="nav-item ">Store</li></a>
-                    <a class="nav-link hoverEffect nav-color" href="../contact.html"><li class="nav-item ">Contact</li></a>
-                    <a class="nav-link hoverEffect nav-color" href="../faq.html"><li class="nav-item ">FAQ</li></a>
+                    <a class="nav-link hoverEffect nav-color" href="../index.php"><li class="nav-item active">Home</li></a>
+                    <a class="nav-link hoverEffect nav-color" href="../store.php"><li class="nav-item ">Store</li></a>
+                    <a class="nav-link hoverEffect nav-color" href="../contact.php"><li class="nav-item ">Contact</li></a>
+                    <a class="nav-link hoverEffect nav-color" href="../faq.php"><li class="nav-item ">FAQ</li></a>
                 </ul>
             </div>
         </nav>
