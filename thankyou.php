@@ -42,11 +42,8 @@ require_once('model/add_form_entry.php');
             <p>Your assigned employee is <?=$full_name?></p>
         </main>
 
-        <footer class="text-white text-center mt-3">
-            <p>Reach out to us through our <a class="nav-color" href="contact.html">contact form!</a></p>
-            <a href="#"><i class="fa fa-facebook mx-3" style="font-size: 50px;"></i></a>
-            <a href="#"><i class="fa fa-instagram mx-3" style="font-size: 50px;"></i></a>
-        </footer>
+        <?php include 'view/footer.php'; ?>
+        
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
         <script src="js/coffee.js"></script>

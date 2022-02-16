@@ -56,4 +56,6 @@ if (!empty($full_name)) {
 
     </div> <br />
 <?php endforeach; ?>
-<?php include('../view/footer.php'); ?>
+<footer>
+    <div class="w-75"><a href="../admin/">Return to Admin Home</a></div>
+</footer>

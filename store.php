@@ -34,16 +34,16 @@
         <nav class="navbar navbar-expand-lg p-3">
             <!--Div 1 is to force div 2 below when neccessary, it is expanded to 100 width when hamburger is clicked-->
             <div id="div1">
-                <a class="navbar-brand nav-color hoverEffect" id="logo" href="index.html">The Java House</a>
+                <a class="navbar-brand nav-color hoverEffect" id="logo" href="index.php">The Java House</a>
                 <button id="hamburgerButton" class="float-end"><i class="fa fa-bars"></i></button>
             </div>
 
             <div id="topnav">
                 <ul class="navbar-nav nav-responsive">
-                    <a class="nav-link hoverEffect nav-color" href="index.html"><li class="nav-item">Home</li></a>
-                    <a class="nav-link hoverEffect nav-color" href="store.html"><li class="nav-item active">Store</li></a>
-                    <a class="nav-link hoverEffect nav-color" href="contact.html"><li class="nav-item ">Contact</li></a>
-                    <a class="nav-link hoverEffect nav-color" href="faq.html"><li class="nav-item ">FAQ</li></a>
+                    <a class="nav-link hoverEffect nav-color" href="index.php"><li class="nav-item">Home</li></a>
+                    <a class="nav-link hoverEffect nav-color" href="store.php"><li class="nav-item active">Store</li></a>
+                    <a class="nav-link hoverEffect nav-color" href="contact.php"><li class="nav-item ">Contact</li></a>
+                    <a class="nav-link hoverEffect nav-color" href="faq.php"><li class="nav-item ">FAQ</li></a>
                     <a class="nav-link hoverEffect nav-color" href="admin/"><li class="nav-item ">Admin</li></a>
                 </ul>
                     
@@ -181,11 +181,7 @@
             </div>
         </main>
 
-        <footer class="text-white text-center mt-3">
-            <p>Reach out to us through our <a class="nav-color" href="contact.html">contact form!</a></p>
-            <a href="#"><i class="fa fa-facebook mx-3" style="font-size: 50px;"></i></a>
-            <a href="#"><i class="fa fa-instagram mx-3" style="font-size: 50px;"></i></a>
-        </footer>
+        <?php include 'view/footer.php'; ?>
         
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
