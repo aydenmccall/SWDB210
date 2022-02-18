@@ -1,6 +1,4 @@
 <?php
-//$full_name = filter_input(INPUT_GET, 'full_name');
-//require('./employee_db.php')
 $employee = EmployeeDB::select_employee($employee_id); //Get the specified Employee
 $full_name = "{$employee['first_name']} {$employee['last_name']}";
 ?>
@@ -11,17 +9,9 @@ if (!empty($full_name)) {
     echo "<h2>$full_name</h2>";
 }
 ?>
+
 <?php foreach ($entries as $entry): ?>
     <div style="background-color:grey" class="w-75 mx-auto">
-        <!--<table id="admin-table">
-            <tr><th>Email: <?php echo $entry['email_address']; ?></th></tr>
-            <tr>
-                <td>Date: <?php echo $entry['visit_date']; ?></td>
-                <td>Category: <?php echo $entry['category_id']; ?></td>
-                <td>Assigned Employee: <?php echo $entry['employee_id']; ?></td>
-            </tr>
-            <tr><td>Message: <br /><?php echo $entry['visit_msg']; ?></td></tr>
-        </table>-->
 
         <p>Email: <?php echo $entry['email_address']; ?></p>
         <p>Date: <?php echo $entry['visit_date']; ?></p>
@@ -56,6 +46,3 @@ if (!empty($full_name)) {
 
     </div> <br />
 <?php endforeach; ?>
-<footer>
-    <div class="w-75"><a href="../admin/">Return to Admin Home</a></div>
-</footer>

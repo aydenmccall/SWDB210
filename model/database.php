@@ -7,27 +7,27 @@
  * Change Log: 
  *  1/28/22: Creation
  *  2/11/22: Changed to use classes 
+ * 2/17/22: changed catch's include(error) to header(error)
  */
 
 $error_message = '';
 
 class Database {
 
-private static $dsn = "mysql:host=localhost;dbname=javahouse";
-private static $username = "javahouseadmin";
-private static $password = "Pa55word";
+private static $dsn = "mysql:host=localhost;dbname=javahouse"; //CHANGE BACK
+private static $username = "javahouseadmin"; //JAVAHOUSEADMIN
+private static $password = "Pa55word"; //Pa55word
 private static $db;
-public function __construct() {
-    
-}
 
 public static function getDB() {
     global $error_message;
     try {
         self::$db = new PDO(self::$dsn, self::$username, self::$password);
-    } catch (PDOException $e) {
+        
+        self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (Exception $e) {
         $error_message = $e->getMessage();
-        include('./error.php');
+        header("location: ../error.php");
         exit();
     }
     return self::$db;

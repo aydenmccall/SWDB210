@@ -42,10 +42,6 @@ require_once('model/add_form_entry.php');
             <p>Your assigned employee is <?=$full_name?></p>
         </main>
 
-        <?php include 'view/footer.php'; ?>
-        
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
-        <script src="js/coffee.js"></script>
+        <?php include 'view/footer.php' ?>
     </body>
 </html>

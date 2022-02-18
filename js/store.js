@@ -1,20 +1,20 @@
 /*
-    Original Author: Ayden McCall
-    Change Log
-    9/21: Creation, relocate files from main js
-    9/22: Button Confirmations added
-*/
+ Original Author: Ayden McCall
+ Change Log
+ 9/21: Creation, relocate files from main js
+ 9/22: Button Confirmations added
+ */
 
 "use strict";
 
-const cart = ( () => {
+const cart = (() => {
     let cartItems = [];
     let dollarUS = Intl.NumberFormat("en-US", {
         style: "currency",
         currency: "USD",
     });
     return {
-        addItem (name, price, amount) {
+        addItem(name, price, amount) {
             let newItem = true;
             for (let i = 0; i < cartItems.length; i++) {
                 if (name == cartItems[i][0]) {
@@ -22,20 +22,21 @@ const cart = ( () => {
                     cartItems[i][2] = parseInt(parseInt(current) + parseInt(amount));
                     newItem = false;
                     break;
-                };
+                }
+                ;
             }
             if (newItem == true) {
                 let item = [name, price, amount]
-            
+
                 cartItems.push(item);
             }
             this.refreshCart();
         }, //End Add Item
-        removeItem (index) {
+        removeItem(index) {
             cartItems.splice(index, 1);
             this.refreshCart();
         }, // End Remove Item
-        refreshCart () {
+        refreshCart() {
             $(".cart").empty();
             let quantity = 0;
             let total = 0;
@@ -65,9 +66,9 @@ const cart = ( () => {
                 $(".cart").append(item);
             }
         }, //End Refresh Cart
-        confirmAdded (element) {
-                $(element).show(1000);
-                $(element).delay(1000).hide("slide", {direction: "right"}, 400);
+        confirmAdded(element) {
+            $(element).show(1000);
+            $(element).delay(1000).hide("slide", {direction: "right"}, 400);
         }
     } // End Return
-}) (); // End Cart
+})(); // End Cart

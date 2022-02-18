@@ -181,12 +181,7 @@
             </div>
         </main>
 
-        <?php include 'view/footer.php'; ?>
-        
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+       <?php include 'view/footer.php' ?>
         <script src="js/store.js"></script>
-        <script src="js/coffee.js"></script>
     </body>
 </html>

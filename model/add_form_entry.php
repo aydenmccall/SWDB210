@@ -1,11 +1,12 @@
 <?php
+
 /*
  * Original Author: Ayden McCall
  * Last edited by: Ayden McCall
  * Change Log:
  * 1/28/22: Instantiation
  */
-//require_once('database.php');
+require('database.php');
 require('employee_db.php');
 
 $db = Database::getDB();
@@ -16,8 +17,9 @@ $message = filter_input(INPUT_POST, 'message');
 $employee_id = rand(1, 20);
 
 $employee = EmployeeDB::select_employee($employee_id);
-$full_name = "{$employee['first_name']} {$employee['last_name']}";
 
+try {
+    $full_name = "{$employee['first_name']} {$employee['last_name']}";
 
     $query = "INSERT INTO contact(email_address, category_id, visit_msg, visit_date, employee_id) "
             . "VALUES (:email, :category_id, :message, NOW(), :random)";
@@ -28,6 +30,11 @@ $full_name = "{$employee['first_name']} {$employee['last_name']}";
     $statement->bindValue(':random', $employee_id);
     $statement->execute();
     $statement->closeCursor();
-    
+
     include('./thankyou.php');
     exit();
+} catch (Exception $ex) {
+    $error_message = $ex->getMessage();
+    header("location: error.php");
+    exit();
+}
